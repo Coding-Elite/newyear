@@ -3,3 +3,11 @@ body{
     height:100 vh;
     background-color:black;
 }
+.fire{
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(darkorange,firebrick,blue);
+    width: 10px;
+    height: 15px;
+    border-radius: 5px;
+}
