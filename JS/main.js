@@ -8,7 +8,7 @@ function viewportSize() {// Fonction qui donne les dimensions
     width: d.clientWidth
   };
 }
-
+var color = ['red','yellow','darorange','magenta','cyan'];
 function detonation(positionX,positionY,z){
   let x,y;
   for(let i = 1;i<= 5;i++){
@@ -19,30 +19,35 @@ function detonation(positionX,positionY,z){
       'transition':0.5+'s'
     });
   }
-  x =positionX-20; y = positionY+20;
+  x =positionX-30; y = positionY+30;
   $('#explose'+z+1).css({
     'top':y+'px',
-    'left':x+'px'
+    'left':x+'px',
+    'background-color':color[randfunc(0,4)]
   });
-  x =positionX-25; y = positionY-20;
+  x =positionX-35; y = positionY-30;
   $('#explose'+z+2).css({
     'top':y,
-    'left':x
+    'left':x,
+    'background-color':color[randfunc(0,4)]
   });
-  x =positionX; y = positionY-25;
+  x =positionX; y = positionY-35;
   $('#explose'+z+3).css({
     'top':y,
-    'left':x
+    'left':x,
+    'background-color':color[randfunc(0,4)]
   });
-  x =positionX+20; y = positionY-18;
+  x =positionX+30; y = positionY-38;
   $('#explose'+z+4).css({
     'top':y,
-    'left':x
+    'left':x,
+    'background-color':color[randfunc(0,4)]
   });
-  x =positionX+20; y = positionY+25;
+  x =positionX+30; y = positionY+35;
   $('#explose'+z+5).css({
     'top':y,
-    'left':x
+    'left':x,
+    'background-color':color[randfunc(0,4)]
   });
 }
 
