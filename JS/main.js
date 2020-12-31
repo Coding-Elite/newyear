@@ -85,8 +85,8 @@ $(function(){
         duree_explosion[i] =0
         $('#fire'+i).css({
           'background-color':'red',
-          'width':'2px',
-          'height':'2px'
+          'width':'7px',
+          'height':'7px'
         });
         for(let j = 1;j<= 5;j++)
           $('#explose'+i+j).remove();
