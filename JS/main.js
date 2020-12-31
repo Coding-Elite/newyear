@@ -11,11 +11,28 @@ function viewportSize() {// Fonction qui donne les dimensions
 
 //Fonction principale
 $(function(){
-  let fire = 10, taille = viewportSize();
-  
-    $('body').append('<div class="fire" id="fire1"></div>');
-    $('#fire1').css({
-        'bottom':'150px',
-        'left':'500px'
+  let fire = 10, taille = viewportSize(), vitesse = [], positionY = [], positionX = [], moveX = [];
+  //Initialisation
+  for(let i = 0; i <= fire;i++)
+  {
+    vitesse[i] = 20;
+    positionY[i] = randfunc(taille.height,taille.height+100);
+    positionX[i] = randfunc(1,taille.width);
+    $('body').append('<div class="fire" id="fire'+i+'"></div>');
+    $('#fire'+i).css({
+        'top':positionY[i]+'px',
+        'left':positionX[i]+'px'
     });
+  }
+  setInterval(function(){
+    taille=viewportSize();
+    for(let i = 0;i < fire; i++)
+   {
+    positionY[i] -= vitesse[i];
+    $('#fire'+i).css({
+      'top':positionY[i]+'px'
+    });
+   }
+  },45);
+    
 });
