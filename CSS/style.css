@@ -1,13 +1,20 @@
-body{
-    width:100 vw;
-    height:100 vh;
-    background-color:black;
+html{
+    height:100%;
+    background:linear-gradient(to bottom,black 55%,gray);
+    overflow: hidden;
 }
 .fire{
     position: absolute;
     z-index: 10;
-    background: linear-gradient(darkorange,firebrick,blue);
-    width: 10px;
-    height: 15px;
+    background-color:red;
+    width: 7px;
+    height: 7px;
     border-radius: 5px;
+}
+.explose{
+    position: absolute;
+    z-index:10;
+    width:2px;
+    height: 2px;
+    background-color: blue;
 }
