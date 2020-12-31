@@ -11,6 +11,8 @@ function viewportSize() {// Fonction qui donne les dimensions
 
 //Fonction principale
 $(function(){
+  let fire = 10, taille = viewportSize();
+  
     $('body').append('<div class="fire" id="fire1"></div>');
     $('#fire1').css({
         'bottom':'150px',
