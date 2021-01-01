@@ -54,15 +54,10 @@ function detonation(positionX,positionY,z){
 //Fonction principale
 $(function(){
   let fire = 10, taille = viewportSize(),duree_explosion = [], vitesse = [], positionY = [], positionX = [], stop = [];
+  $('html').css({
+    'background-image':'url("ciel.jpg")'
+  });
   //Initialisation
-  for(let i = 0; i < 15;i++)
-  {
-    $('body').append('<p  class="etoile" id="e'+i+'" style="color: red;"><img src="etoile.png" /></p>');
-    $('#e'+i).css({
-      'top':randfunc(1,taille.height/2)+'px',
-      'left':randfunc(1,taille.width)+'px'
-    });
-  }
   for(let i = 0; i <= fire;i++)
   {
     vitesse[i] = 10;
