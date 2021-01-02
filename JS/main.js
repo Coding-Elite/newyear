@@ -35,13 +35,12 @@ $(function(){
         'width':75+'px',
         'height':125+'px'
       });
-      positionX = positionX-50;
+      positionX -= 75/2;
 	   //positionY = taille.height;
-     // positionX = taille.width/2;
      k = 1;
     }
-    else if(k == 1){
-
+    else if(k==1){
+      
     }
     else
       positionY -= vitesse;
