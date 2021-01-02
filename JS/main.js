@@ -19,10 +19,10 @@ $(function(){
   });
   //Initialisation
     vitesse = 20;
-    positionY = randfunc(taille.height,taille.height);
+    positionY = taille.height;
     positionX = taille.width/2;
     duree_explosion = 0;
-    stop = randfunc(20,120);
+    stop = 20;
     $('body').append('<div class="fire" id="fire"></div>');
     $('#fire').css({
         'top':positionY+'px',
@@ -31,9 +31,8 @@ $(function(){
   setInterval(function(){
     taille=viewportSize();
     if(positionY <= stop){
-    //$('body').append('<div id="p">P</div>');
-	positionY = randfunc(taille.height,taille.height);
-    positionX = taille.width/2;
+	   //positionY = taille.height;
+     // positionX = taille.width/2;
     }
      else
       positionY -= vitesse;

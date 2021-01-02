@@ -10,14 +10,6 @@ html{
     height: 25px;
     border-radius: 5px;
 }
-/*#p{
-	font-size:5em;
-	position:absolute;
-	width:100px;
-	height:100px;
-	color:#FFFF00;
-	z-index:10;
-}*/
 .explose{
     position: absolute;
     z-index:10;
