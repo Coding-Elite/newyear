@@ -13,7 +13,7 @@ voeux = ['PROSPERITY', 'JOY', 'PEACE', 'HAPPINESS', 'WISDOM', 'WEALTH', 'HEALTH'
 
 //Fonction principale
 $(function(){
-  let fire = 1, taille = viewportSize(),duree_explosion = 0, vitesse = 0, positionY = 0, positionX = 0, stop = 0;
+  let k = 0, taille = viewportSize(),duree_explosion = 0, vitesse = 0, positionY = 0, positionX = 0, stop = 0;
   $('html').css({
     'background-image':'url("ciel.jpg")'
   });
@@ -22,23 +22,32 @@ $(function(){
     positionY = taille.height;
     positionX = taille.width/2;
     duree_explosion = 0;
-    stop = 20;
-    $('body').append('<div class="fire" id="fire"></div>');
-    $('#fire').css({
+    stop = 100;
+    $('body').append('<div class="fire"></div>');
+    $('.fire').css({
         'top':positionY+'px',
         'left':positionX+'px'
     });
   setInterval(function(){
     taille=viewportSize();
-    if(positionY <= stop){
+    if(positionY <= stop && k!=1){
+      $('.fire').css({
+        'width':75+'px',
+        'height':125+'px'
+      });
+      positionX = positionX-50;
 	   //positionY = taille.height;
      // positionX = taille.width/2;
+     k = 1;
     }
-     else
+    else if(k == 1){
+
+    }
+    else
       positionY -= vitesse;
-      $('#fire').css({
-        'top':positionY+'px',
-        'left':positionX+'px'
+    $('.fire').css({
+      'top':positionY+'px',
+      'left':positionX+'px'
     });
    
   },45);

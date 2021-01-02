@@ -1,5 +1,5 @@
-function lettre(lettre) {
-	let taille=viewportSize();
+function lettre(X,Y,lettre) {
+	
 	switch(lettre){
 		case 'a':
 		{
