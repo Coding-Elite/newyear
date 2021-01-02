@@ -1,4 +1,4 @@
-html{
+html,body{
     height:100%;
     overflow: hidden;
 }
@@ -20,4 +20,12 @@ html{
 .etoile{
     position: absolute;
     z-index: 9;
+}
+.lettre{
+    position: absolute;
+    z-index: 10;
+    width: 3px;
+    height: 5px;
+    transition:2s;
+    border-radius: 5px;
 }

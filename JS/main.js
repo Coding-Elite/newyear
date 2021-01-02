@@ -8,7 +8,7 @@ function viewportSize() {// Fonction qui donne les dimensions
     width: d.clientWidth
   };
 }
-var color = ['red','yellow','darorange','magenta','cyan'], 
+var color = ['red','yellow','darkorange','magenta','cyan'], 
 voeux = ['PROSPERITY', 'JOY', 'PEACE', 'HAPPINESS', 'WISDOM', 'WEALTH', 'HEALTH', 'STRENGTH', 'LONGEVITY', 'PERSEVERANCE', 'LOVE'];
 
 //Fonction principale
@@ -28,22 +28,25 @@ $(function(){
         'top':positionY+'px',
         'left':positionX+'px'
     });
-  setInterval(function(){
+  setTimeout(function principal(){
     taille=viewportSize();
     if(positionY <= stop && k!=1){
-      positionX -= 75/2;
-     k = 1;
+      $('.fire').css({
+        'opacity':'0',
+        'top':positionY+'px',
+        'left':positionX+'px'
+      });
+      lettre(positionX,positionY,'a');
+      k = 1;
     }
-    else if(k==1){
-
-    }
-    else
+    else if(k !=1 )
+    {
       positionY -= vitesse;
-    $('.fire').css({
-      'top':positionY+'px',
-      'left':positionX+'px'
-    });
-   
-  },45);
-    
+      $('.fire').css({
+        'top':positionY+'px',
+        'left':positionX+'px'
+      });
+      setTimeout(principal,45);
+    }
+  },45); 
 });
