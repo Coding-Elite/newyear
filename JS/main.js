@@ -10,48 +10,7 @@ function viewportSize() {// Fonction qui donne les dimensions
 }
 var color = ['red','yellow','darorange','magenta','cyan'], 
 voeux = ['PROSPERITY', 'JOY', 'PEACE', 'HAPPINESS', 'WISDOM', 'WEALTH', 'HEALTH', 'STRENGTH', 'LONGEVITY', 'PERSEVERANCE', 'LOVE'];
-/*function detonation(positionX,positionY,z){
-  let x,y;
-  for(let i = 1;i<= 5;i++){
-    $('body').append('<div class="explose" id="explose'+z+i+'"></div>');
-    $('#explose'+x+i).css({
-      'top':positionY+'px',
-      'left':positionX+'px',
-      'transition':0.5+'s'
-    });
-  }
-  x =positionX-30; y = positionY+30;
-  $('#explose'+z+1).css({
-    'top':y+'px',
-    'left':x+'px',
-    'background-color':color[randfunc(0,4)]
-  });
-  x =positionX-35; y = positionY-30;
-  $('#explose'+z+2).css({
-    'top':y,
-    'left':x,
-    'background-color':color[randfunc(0,4)]
-  });
-  x =positionX; y = positionY-35;
-  $('#explose'+z+3).css({
-    'top':y,
-    'left':x,
-    'background-color':color[randfunc(0,4)]
-  });
-  x =positionX+30; y = positionY-38;
-  $('#explose'+z+4).css({
-    'top':y,
-    'left':x,
-    'background-color':color[randfunc(0,4)]
-  });
-  x =positionX+30; y = positionY+35;
-  $('#explose'+z+5).css({
-    'top':y,
-    'left':x,
-    'background-color':color[randfunc(0,4)]
-  });
-}
-*/
+
 //Fonction principale
 $(function(){
   let fire = 1, taille = viewportSize(),duree_explosion = 0, vitesse = 0, positionY = 0, positionX = 0, stop = 0;
