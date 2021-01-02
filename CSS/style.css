@@ -5,9 +5,9 @@ html{
 .fire{
     position: absolute;
     z-index: 10;
-    background-color:red;
+    background:linear-gradient(to bottom, #FFFF00, #FF0033);
     width: 7px;
-    height: 7px;
+    height: 15px;
     border-radius: 5px;
 }
 .explose{
