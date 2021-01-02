@@ -72,10 +72,7 @@ $(function(){
   setInterval(function(){
     taille=viewportSize();
     if(positionY <= stop){
-      /*$('#fire').css({
-        'background-color':'magenta',
-        'z-index':11
-      });*/
+    //$('body').append('<div id="p">P</div>');
 	positionY = randfunc(taille.height,taille.height);
     positionX = taille.width/2;
     }
