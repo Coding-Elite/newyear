@@ -74,7 +74,6 @@ function lettre(X,Y,lettre) {
 				'top':py+'px',
 				'left':px+'px'
 			});
-			setTimeout(removeBlocLettre,2000);
 		}
 		case 'b':
 		{
@@ -152,4 +151,5 @@ function lettre(X,Y,lettre) {
 		{
 		}
 	}
+	setTimeout(removeBlocLettre,1000);
 }
