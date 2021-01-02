@@ -8,7 +8,8 @@ function viewportSize() {// Fonction qui donne les dimensions
     width: d.clientWidth
   };
 }
-var color = ['red','yellow','darorange','magenta','cyan'], voeux = ['PROSPERITY', 'JOY', 'PEACE', 'HAPPINESS', 'WISDOM', 'WEALTH', 'HEALTH', 'STRENGTH', 'LONGEVITY', 'PERSEVERANCE', 'LOVE'];
+var color = ['red','yellow','darorange','magenta','cyan'], 
+voeux = ['PROSPERITY', 'JOY', 'PEACE', 'HAPPINESS', 'WISDOM', 'WEALTH', 'HEALTH', 'STRENGTH', 'LONGEVITY', 'PERSEVERANCE', 'LOVE'];
 /*function detonation(positionX,positionY,z){
   let x,y;
   for(let i = 1;i<= 5;i++){
@@ -53,60 +54,38 @@ var color = ['red','yellow','darorange','magenta','cyan'], voeux = ['PROSPERITY'
 */
 //Fonction principale
 $(function(){
-  let fire = 10, taille = viewportSize(),duree_explosion = [], vitesse = [], positionY = [], positionX = [], stop = [];
+  let fire = 1, taille = viewportSize(),duree_explosion = 0, vitesse = 0, positionY = 0, positionX = 0, stop = 0;
   $('html').css({
     'background-image':'url("ciel.jpg")'
   });
   //Initialisation
-  for(let i = 0; i <= fire;i++)
-  {
-    vitesse[i] = 10;
-    positionY[i] = randfunc(taille.height,taille.height+100);
-    positionX[i] = randfunc(1,taille.width);
-    duree_explosion[i] = 0;
-    stop[i] = randfunc(20,120);
-    $('body').append('<div class="fire" id="fire'+i+'"></div>');
-    $('#fire'+i).css({
-        'top':positionY[i]+'px',
-        'left':positionX[i]+'px'
+    vitesse = 20;
+    positionY = randfunc(taille.height,taille.height);
+    positionX = taille.width/2;
+    duree_explosion = 0;
+    stop = randfunc(20,120);
+    $('body').append('<div class="fire" id="fire"></div>');
+    $('#fire').css({
+        'top':positionY+'px',
+        'left':positionX+'px'
     });
-  }
   setInterval(function(){
     taille=viewportSize();
-    for(let i = 0;i < fire; i++)
-   {
-     if(positionY[i] <= stop[i]){
-      $('#fire'+i).css({
-        'background-color':'blue',
-        'width':'2px',
-        'height':'2px',
+    if(positionY <= stop){
+      /*$('#fire').css({
+        'background-color':'magenta',
         'z-index':11
-      });
-      /*if(duree_explosion[i]==0)
-      {
-        detonation(positionX[i],positionY[i],i)
-      }
-      duree_explosion[i] +=1;
-      if(duree_explosion[i]==22){
-        positionY[i] = randfunc(taille.height,taille.height+100);
-        positionX[i] = randfunc(1,taille.width);
-        duree_explosion[i] =0
-        $('#fire'+i).css({
-          'background-color':'red',
-          'width':'7px',
-          'height':'7px'
-        });
-        for(let j = 1;j<= 5;j++)
-          $('#explose'+i+j).remove();
-      }*/
-     }
+      });*/
+	positionY = randfunc(taille.height,taille.height);
+    positionX = taille.width/2;
+    }
      else
-      positionY[i] -= vitesse[i];
-      $('#fire'+i).css({
-        'top':positionY[i]+'px',
-        'left':positionX[i]+'px'
+      positionY -= vitesse;
+      $('#fire').css({
+        'top':positionY+'px',
+        'left':positionX+'px'
     });
-   }
+   
   },45);
     
 });
