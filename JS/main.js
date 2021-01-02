@@ -9,7 +9,7 @@ function viewportSize() {// Fonction qui donne les dimensions
   };
 }
 var color = ['red','yellow','darorange','magenta','cyan'];
-function detonation(positionX,positionY,z){
+/*function detonation(positionX,positionY,z){
   let x,y;
   for(let i = 1;i<= 5;i++){
     $('body').append('<div class="explose" id="explose'+z+i+'"></div>');
@@ -50,7 +50,7 @@ function detonation(positionX,positionY,z){
     'background-color':color[randfunc(0,4)]
   });
 }
-
+*/
 //Fonction principale
 $(function(){
   let fire = 10, taille = viewportSize(),duree_explosion = [], vitesse = [], positionY = [], positionX = [], stop = [];
@@ -82,7 +82,7 @@ $(function(){
         'height':'2px',
         'z-index':11
       });
-      if(duree_explosion[i]==0)
+      /*if(duree_explosion[i]==0)
       {
         detonation(positionX[i],positionY[i],i)
       }
@@ -98,7 +98,7 @@ $(function(){
         });
         for(let j = 1;j<= 5;j++)
           $('#explose'+i+j).remove();
-      }
+      }*/
      }
      else
       positionY[i] -= vitesse[i];
