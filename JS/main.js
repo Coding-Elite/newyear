@@ -8,7 +8,7 @@ function viewportSize() {// Fonction qui donne les dimensions
     width: d.clientWidth
   };
 }
-var color = ['red','yellow','darkorange','magenta','cyan'], 
+var color = ['red','yellow','darkorange','magenta','cyan', 'MediumVioletRed', 'BlueViolet', 'Indigo', 'GreenYellow', 'LimeGreen', 'DarkTurquoise', 'MediumBlue', 'Goldenrod'], 
 voeux = ['PROSPERITY', 'JOY', 'PEACE', 'HAPPINESS', 'WISDOM', 'WEALTH', 'HEALTH', 'STRENGTH', 'LONGEVITY', 'PERSEVERANCE', 'LOVE'];
 
 //Fonction principale
