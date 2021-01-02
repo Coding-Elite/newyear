@@ -18,7 +18,7 @@ function lettre(X,Y,lettre) {
 	switch(lettre){
 		case 'a':
 		{
-			addBlocLettre(X,Y,5);
+			addBlocLettre(X,Y,11);
 			px = X-37.5; py =Y+ 62.5;
 			$('.lettre.0').css({
 				'top':py+'px',
@@ -44,7 +44,37 @@ function lettre(X,Y,lettre) {
 				'top':py+'px',
 				'left':px+'px'
 			});
-			//setTimeout(removeBlocLettre,4000);
+			px = X-7; py =Y;
+			$('.lettre.5').css({
+				'top':py+'px',
+				'left':px+'px'
+			});
+			px = X-10; py =Y-31.25;
+			$('.lettre.6').css({
+				'top':py+'px',
+				'left':px+'px'
+			});
+			px = X+10; py =Y-31.25;
+			$('.lettre.7').css({
+				'top':py+'px',
+				'left':px+'px'
+			});
+			px = X-30.5; py =Y+31.25;
+			$('.lettre.8').css({
+				'top':py+'px',
+				'left':px+'px'
+			});
+			px = X+30.5; py =Y+31.25;
+			$('.lettre.9').css({
+				'top':py+'px',
+				'left':px+'px'
+			});
+			px = X+7; py =Y;
+			$('.lettre.10').css({
+				'top':py+'px',
+				'left':px+'px'
+			});
+			setTimeout(removeBlocLettre,2000);
 		}
 		case 'b':
 		{

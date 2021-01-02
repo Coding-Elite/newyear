@@ -37,7 +37,14 @@ $(function(){
         'left':positionX+'px'
       });
       lettre(positionX,positionY,'a');
-      k = 1;
+      positionY = taille.height;
+      $('.fire').css({
+        'opacity':'1',
+        'top':positionY+'px',
+        'left':positionX+'px'
+      });
+      principal();
+
     }
     else if(k !=1 )
     {

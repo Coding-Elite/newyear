@@ -24,8 +24,8 @@ html,body{
 .lettre{
     position: absolute;
     z-index: 10;
-    width: 3px;
-    height: 5px;
+    width: 10px;
+    height: 12px;
     transition:2s;
     border-radius: 5px;
 }
