@@ -31,16 +31,11 @@ $(function(){
   setInterval(function(){
     taille=viewportSize();
     if(positionY <= stop && k!=1){
-      $('.fire').css({
-        'width':75+'px',
-        'height':125+'px'
-      });
       positionX -= 75/2;
-	   //positionY = taille.height;
      k = 1;
     }
     else if(k==1){
-      
+
     }
     else
       positionY -= vitesse;
