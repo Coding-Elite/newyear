@@ -10,9 +10,6 @@ function addBlocLettre(X,Y,nombre){
 		});
 	}
 }
-function removeBlocLettre(){
-	$('.lettre').remove();
-}
 function lettre(X,Y,lettre) {
 	let px,py;
 	switch(lettre){
@@ -151,5 +148,4 @@ function lettre(X,Y,lettre) {
 		{
 		}
 	}
-	setTimeout(removeBlocLettre,1000);
 }
